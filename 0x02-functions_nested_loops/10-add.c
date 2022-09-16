@@ -2,9 +2,10 @@
 /**
  * add - add two given numbers
  *
- * Return: Sum of the two numbers
+ * Return: The sum of two giben numbers
  */
-int add(int num1, int num2)
+int add(int a, int b)
 {
-	return (num1 + num2);
+	return (a + b);
 }
+  
