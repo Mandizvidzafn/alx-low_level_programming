@@ -2,13 +2,8 @@
 #include <ctype.h>
 
 /**
-*  _strcmp - Function which compare two strings and
-*@s1: first string
-*@s2:second string
-*Return:
-*		returns zero if s1 == s2
-*		returns negative number if s1 < s2
-*		returns positive number if s1 > s2
+*  cap_string - Function to capitalize all words of a string
+*Return: the string capitalized
 */
 
 void capitalize_string(char *s)
