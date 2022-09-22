@@ -1,11 +1,11 @@
 #include "main.h"
-/*
+/**
  * _leet - Function to encode string
  *@str: string which will be encoded
  * Return c
  */
-char *leet(char *str) {
-
+char *leet(char *str)
+{
 	int index_1 = 0, index_2;
 	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 	
@@ -18,5 +18,5 @@ char *leet(char *str) {
 				str[index_1] = index_2 + 'O';
 		}
 	}
-	return (str)
+	return (str);
 }
