@@ -1,4 +1,5 @@
 #include "main.h"
+#include <ctype.h>
 
 /**
 *  _strcmp - Function which compare two strings and
@@ -10,20 +11,13 @@
 *		returns positive number if s1 > s2
 */
 
-void *cap_string(char s[]) {
-   int c = 0;
-   int spaceCounter = 0; //First word not to be capitalized
-
-   while (s[c] != '\0')
-   {
-     if ((spaceCounter %2 == 1) && s[c] >= 'a' && s[c] <= 'z')
-     {
-        s[c] = s[c] - 32; // You can use toupper function for the same.
-     }
-     else if(s[c] == ' ')
-     {
-        spaceCounter++; //Reached the next word
-     }
-     c++;
-  }
+void capitalize_string(char *s)
+{
+    for (int prev = ' ';  *s;  ++s) {
+        int current = (unsigned char)*s;
+        if (!isalnum(prev) && isalpha(current)) {
+            *s = (char)toupper(current);
+        }
+        prev = current;
+    }
 }
