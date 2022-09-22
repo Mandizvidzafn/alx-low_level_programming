@@ -1,18 +1,33 @@
 #include "main.h"
-#include <ctype.h>
 
 /**
 *  cap_string - Function to capitalize all words of a string
+*  @str: string to capitalize
 *Return: the string capitalized
 */
-
-void capitalize_string(char *s)
+char *cap_string(char *str)
 {
-    for (int prev = ' ';  *s;  ++s) {
-        int current = (unsigned char)*s;
-        if (!isalnum(prev) && isalpha(current)) {
-            *s = (char)toupper(current);
-        }
-        prev = current;
-    }
+	int index = 0
+
+	while (str[++index])
+	{
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+
+		if (str[index - 1] == ' ' ||
+				str[index - 1 == '\t' ||
+				str[index - 1 == '\n' ||
+				str[index - 1 == ',' ||
+				str[index - 1 == ';' ||
+				str[index - 1 == '.' ||
+				str[index - 1 == '!' ||
+				str[index - 1 == '?' ||
+				str[index - 1 == '"' ||
+				str[index - 1 == '(' ||
+				str[index - 1 == ')' ||
+				str[index - 1 == '{' ||
+				str[index - 1 == '}' ||
+			str[index] -= 32;
+	}
+	return (str);
 }
