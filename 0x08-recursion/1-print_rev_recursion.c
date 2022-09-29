@@ -1,17 +1,15 @@
 #include "main.h"
 #include <string.h>
 /**
- * _puts_recursion - prints a string
+ * _print_rev_recursion - prints a string in a reverse order
  * @s: a string
  * Return: void
  */
-void _puts_recursion(char *s)
+void _print_rev_recursion(char *s)
 {
-	if (strlen(s) == 0)
-		_putchar('\n');
-	else
+	if (strlen(s) != 0)
 	{
-		_putchar(s[0]);
-		_puts_recursion(s + 1);
+		_print_rev_recursion(s + 1);
+		_putchar(*s);
 	}
 }
